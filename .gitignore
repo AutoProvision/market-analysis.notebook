@@ -3,3 +3,4 @@ pasta_extraida/
 planilha_*/
 planilha_*.csv
 *data.csv
+*.parquet
