@@ -1,0 +1,104 @@
+uf
+PF - Cartão de crédito 
+• PF - Empréstimo com consignação em folha 
+• PF - Empréstimo sem consignação em folha 
+• PF - Habitacional 
+• PF - Outros créditos 
+• PF - Rural e agroindustrial 
+• PF - Veículos 
+• PJ - Capital de giro rotativo 
+• PJ - Financiamento de infraestrutura/desenvolvimento/projeto e outros créditos 
+• PJ - Investimento 
+• PJ - Operações com recebíveis 
+• PJ - Outros créditos 
+
+• PJ - Rural e agroindustrial 
+• PJ - Capital de giro 
+• PJ - Comércio exterior 
+• PJ - Habitacional
+
+
+tcb
+
+
+
+sr
+
+
+
+cliente
+
+
+
+ocupacao
+
+
+
+cnae_secao
+
+
+
+cnae_subclasse
+
+
+
+porte
+
+
+
+modalidade
+
+
+
+origem
+
+
+
+indexador
+
+
+
+numero_de_operacoes
+
+
+
+a_vencer_ate_90_dias
+
+
+
+a_vencer_de_91_ate_360_dias
+
+
+
+a_vencer_de_361_ate_1080_dias
+
+
+
+a_vencer_de_1081_ate_1800_dias
+
+
+
+a_vencer_de_1801_ate_5400_dias
+
+
+
+a_vencer_acima_de_5400_dias
+
+
+
+vencido_acima_de_15_dias
+
+
+
+carteira_ativa
+
+
+
+carteira_inadimplida_arrastada
+
+
+
+ativo_problematico
+
+
+
