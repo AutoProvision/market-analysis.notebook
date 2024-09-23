@@ -4,3 +4,7 @@ planilha_*/
 planilha_*.csv
 *data.csv
 *.parquet
+data/staging/
+data/raw/
+data/trusted/
+data/refined/
