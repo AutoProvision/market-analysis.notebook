@@ -9,6 +9,7 @@ ao ocorrer insert no bucket de staging:
   pega o arquivo do diretório de data mais recente (o nome dos diretórios é referente à data do arquivo)
   cria/(recria, caso exista) o diretório referente ao ano do arquivo
   extrai todos os .csv do .zip e insere nesse novo diretório
+  chama o hook da próxima instância
 
 ao ocorrer insert no bucket raw:
   pega todo o conteúdo do bucket raw
