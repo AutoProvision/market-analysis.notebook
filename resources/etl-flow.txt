@@ -1,0 +1,23 @@
+CRON day(1) triggera função lambda:
+  GET SCR DATA em dadosabertos
+  verifica qual o último arquivo .zip disponível no website
+  GET nesse arquivo .zip e verifica qual o último arquivo .csv dentro do zip
+  verifica se já existe um diretório para armazenar o último arquivo .csv do último arquivo .zip
+  cria o diretório e armazena o .zip completo no bucket de staging
+
+ao ocorrer insert no bucket de staging:
+  pega o arquivo do diretório de data mais recente (o nome dos diretórios é referente à data do arquivo)
+  cria/(recria, caso exista) o diretório referente ao ano do arquivo
+  extrai todos os .csv do .zip e insere nesse novo diretório
+  chama o hook da próxima instância
+
+ao ocorrer insert no bucket raw:
+  pega todo o conteúdo do bucket raw
+  cria um pd.dataframe com todas as planilhas de todos os anos, com amostras randomizadas
+  converte colunas para 'category', 'float' e 'int'
+  converte data_base para datetime
+  renomeia cliente para ct_classificacao , coluna que representa PF ou PJ
+  são retirados os 5 primeiros caracteres de ct_porte, ct_modalidade, ct_ocupacao, ct_cnae_secao, ct_cnae_subclasse, pois representam a mesma coisa que ct_classificacao
+  transforma o dataframe em parquet e insere no bucket trusted
+  são criadas as colunas vl_carteira_ativa_n_arrastada, ct_faixa_meses_ate_vencimento, vl_media_carteira_ativa_por_operacao, vl_media_carteira_inadimplida_por_operacao
+  transforma o dataframe em parquet e insere no bucket refined
