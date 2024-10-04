@@ -8,3 +8,4 @@ data/staging/
 data/raw/
 data/trusted/
 data/refined/
+__pycache__/
